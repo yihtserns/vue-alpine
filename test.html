@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
+        <script type="text/javascript" src="vue-alpine.js"></script>
+    </head>
+    <body>
+        <div v-data="{ open: false }">
+            <button @click="open=true">Expand</button>
+
+            <span v-show="open">
+                Content...
+            </span>
+        </div>
+    </body>
+</html>
