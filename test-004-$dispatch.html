@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js"></script>
+        <script type="text/javascript" src="vue-alpine.js"></script>
+    </head>
+    <body>
+        <div v-data="{ open: false }">
+            <div v-on:welcome="open=true">
+                <button @click="$dispatch('welcome', $event)">Expand</button>
+
+                <span v-show="open">
+                    Content...
+                </span>
+            </div>
+        </div>
+    </body>
+</html>

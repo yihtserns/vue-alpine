@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         // since binding.expression will be auto-evaluated by Vue
                     }
                 }
+            },
+            methods: {
+                $dispatch(eventName, event) {
+                    event.target.dispatchEvent(new Event(eventName, {bubbles: true}));
+                }
             }
         });
     });
