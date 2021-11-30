@@ -4,7 +4,7 @@
         <script type="text/javascript" src="vue-alpine.js"></script>
     </head>
     <body>
-        <div v-data="{ count: 0 }" v-effect="function() { this.console.log(count) }">
+        <div v-data="{ count: 0 }" v-effect="console.log(count)">
             Count: {{count}}
 
             <button @click="count++">+1</button>
