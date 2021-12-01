@@ -4,8 +4,9 @@
         <script type="text/javascript" src="vue-alpine.js"></script>
     </head>
     <body>
-        <div v-data="{ open: false, date: null }" v-init="open=true">
-            <span v-show="open" v-init="date=new Date()">
+        <div v-data="{ open: false, date: null }" v-init="() => open=true">
+            <button @click="open=!open">{{ open ? 'Hide' : 'Show' }}</button>
+            <span v-show="open" v-init="() => date=new Date()">
                 Content... {{date}}
             </span>
         </div>
